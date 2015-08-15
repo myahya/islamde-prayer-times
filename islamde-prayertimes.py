@@ -137,6 +137,9 @@ usage python islamde-prayertimes.py [-i inputfile] [-p port]
   -p set the port, the default is 8087."""
       sys.exit(2)
 
+  # Move into the installation directory
+  os.chdir(os.environ['ISLAMDE'])
+
   inputfile = getInputFile(inputfile)
 
   print 'Running with input file: ', inputfile
